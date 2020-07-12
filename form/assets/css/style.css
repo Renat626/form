@@ -1,0 +1,340 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.form {
+  width: 622px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #dadada;
+}
+
+.form button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #888888;
+  font-size: 30px;
+  opacity: 0.5;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.form__header {
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+}
+
+.form__header h1 {
+  padding-top: 65px;
+  font: Bold 26px/31px Arial;
+  letter-spacing: 0px;
+  color: #444444;
+}
+
+.form__header h2 {
+  font: 16px/22px Arial;
+  letter-spacing: 0px;
+  color: #212121;
+  width: 431px;
+  margin: 0 auto;
+  margin-top: 21px;
+  margin-bottom: 11px;
+}
+
+.form__header span {
+  color: #EA137A;
+}
+
+.form__content {
+  background: url('../img/Без имени-2@2x.png') no-repeat center;
+  background-size: cover;
+  width: 620px;
+  height: 623px;
+  padding-top: 11px;
+}
+
+.form__content form {
+  width: 348px;
+  margin: 0 auto;
+  padding-top: 29px;
+}
+
+.form__content form p {
+  font: 12px/14px Arial;
+  letter-spacing: 0px;
+  color: #888888;
+}
+
+.form__content form input[type='text'], form input[type='tel'] {
+  width: 348px;
+  height: 36px;
+  background: #F7F7F7;
+  border: none;
+  margin-top: 7px;
+  margin-bottom: 20px;
+  outline: none;
+  font-size: 20px;
+}
+
+.form__content form input[type='checkbox'] {
+  display: none;
+}
+
+.form__content label {
+  font: 12px/14px Arial;
+  letter-spacing: 0px;
+  color: #888888;
+}
+
+.form__content span {
+  color: #DCDD44;
+}
+
+.form__content label::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #EA137A;
+  vertical-align: middle;
+  margin-right: 9px;
+}
+
+.form__content form input[type='checkbox']:checked + label::before {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDc3Ljg2NyA0NzcuODY3IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NzcuODY3IDQ3Ny44Njc7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNNDA5LjYsMEg2OC4yNjdDMzAuNTY0LDAsMCwzMC41NjQsMCw2OC4yNjdWNDA5LjZjMCwzNy43MDMsMzAuNTY0LDY4LjI2Nyw2OC4yNjcsNjguMjY3SDQwOS42DQoJCQljMzcuNzAzLDAsNjguMjY3LTMwLjU2NCw2OC4yNjctNjguMjY3VjY4LjI2N0M0NzcuODY3LDMwLjU2NCw0NDcuMzAzLDAsNDA5LjYsMHogTTQ1Ni4yMTksOTYuOTgNCgkJCWMtMC4xMzcsMC4xNDItMC4yNzcsMC4yODItMC40MiwwLjQyTDE2NS42NjYsMzg3LjUzM2MtNi42NjUsNi42NjMtMTcuNDY4LDYuNjYzLTI0LjEzMiwwbC0xMDIuNC0xMDIuNA0KCQkJYy02LjU0OC02Ljc4LTYuMzYtMTcuNTg0LDAuNDItMjQuMTMyYzYuNjE0LTYuMzg4LDE3LjA5OS02LjM4OCwyMy43MTMsMGw5MC4zMzQsOTAuMzM0TDQzMS42NjcsNzMuMjY3DQoJCQljNi41NDgtNi43OCwxNy4zNTItNi45NjgsMjQuMTMyLTAuNDJDNDYyLjU3OSw3OS4zOTYsNDYyLjc2Nyw5MC4yLDQ1Ni4yMTksOTYuOTh6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=);
+  background-color: #fff;
+}
+
+.form__content form input[type='submit'] {
+  margin-top: 19px;
+  width: 106px;
+  height: 37px;
+  background: #EA137A;
+  border-radius: 1px;
+  border: none;
+  outline: none;
+  text-align: center;
+  font: 12px/14px Arial;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.form__content form input[type='submit']:disabled {
+  background-color: #DEDFE0;
+  cursor: default;
+}
+
+@media screen and (max-height: 800px), screen and (max-width: 1000px) {
+  .form {
+    width: 400px;
+  }
+
+  .form button {
+    font-size: 20px;
+  }
+
+  .form__header h1 {
+    font-size: 17px;
+    padding-top: 45px;
+  }
+
+  .form__header h2 {
+    font-size: 11px;
+    width: 296px;
+    margin-top: 11px;
+  }
+
+  .form__content {
+    height: 400px;
+    width: 398px;
+  }
+
+  .form__content form {
+    width: 207px;
+    padding-top: 4px;
+  }
+
+  .form__content form p {
+    font-size: 10px;
+  }
+
+  .form__content form input[type='text'], form input[type='tel'] {
+    width: inherit;
+    height: 24px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .form__content label {
+    font-size: 8px;
+  }
+
+  .form__content label::before {
+    width: 8px;
+    height: 8px;
+  }
+
+  .form__content form input[type='submit'] {
+    margin-top: 11px;
+    width: 65px;
+    height: 20px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-height: 550px) {
+  .form {
+    width: 300px;
+  }
+
+  .form button {
+    font-size: 14px;
+    top: 12px;
+    right: 12px;
+  }
+
+  .form__header h1 {
+    font-size: 13px;
+    padding-top: 34px;
+  }
+
+  .form__header h2 {
+    font-size: 7px;
+    width: 186px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    line-height: 1.3;
+  }
+
+  .form__content {
+    height: 300px;
+    width: 298px;
+  }
+
+  .form__content form {
+    width: 150px;
+    padding-top: 4px;
+  }
+
+  .form__content form p {
+    font-size: 6px;
+  }
+
+  .form__content form input[type='text'], form input[type='tel'] {
+    width: inherit;
+    height: 18px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+
+  .form__content label {
+    font-size: 5px;
+  }
+
+  .form__content label::before {
+    width: 7px;
+    height: 7px;
+    margin-right: 5px;
+  }
+
+  .form__content form input[type='submit'] {
+    margin-top: 7px;
+    width: 49px;
+    height: 14px;
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-height: 420px), (max-width: 400px) {
+  .form {
+    width: 220px;
+  }
+
+  .form button {
+    font-size: 10px;
+    top: 8px;
+    right: 8px;
+  }
+
+  .form__header h1 {
+    font-size: 9px;
+    padding-top: 24px;
+    line-height: 1.3;
+  }
+
+  .form__header h2 {
+    font-size: 5px;
+    width: 134px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    line-height: 1.3;
+  }
+
+  .form__content {
+    height: 219px;
+    width: 218px;
+  }
+
+  .form__content form {
+    width: 115px;
+    padding-top: 4px;
+  }
+
+  .form__content form p {
+    font-size: 5px;
+    line-height: 1;
+  }
+
+  .form__content form input[type='text'], form input[type='tel'] {
+    width: inherit;
+    height: 13px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 10px;
+  }
+
+  .form__content form input[type='tel'] {
+    margin-bottom: 0;
+  }
+
+  .form__content label {
+    font-size: 4px;
+  }
+
+  .form__content label::before {
+    width: 5px;
+    height: 5px;
+    margin-right: 3px;
+  }
+
+  .form__content form input[type='submit'] {
+    margin-top: 7px;
+    width: 36px;
+    height: 10px;
+    font-size: 5px;
+    line-height: 10px;
+  }
+}
+
+/* class for js */
+
+.hideForm {
+  display: none;
+}
